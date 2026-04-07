@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Marimo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Time Marimo</h1>
+      <p class="subtitle">ぼーっと眺める、ゆるい育成タイマー</p>
+    </header>
+
+    <main class="main">
+      <section class="tank-section">
+        <div class="tank" id="tank">
+          <div class="light light-1"></div>
+          <div class="light light-2"></div>
+
+          <div class="bubbles">
+            <span class="bubble b1"></span>
+            <span class="bubble b2"></span>
+            <span class="bubble b3"></span>
+            <span class="bubble b4"></span>
+            <span class="bubble b5"></span>
+            <span class="bubble b6"></span>
+            <span class="bubble b7"></span>
+            <span class="bubble b8"></span>
+          </div>
+
+          <div class="marimo-wrap" id="marimoWrap">
+            <button id="marimo" class="marimo" type="button" aria-label="まりもをタップ">
+              <span class="marimo-core"></span>
+              <span class="marimo-shine"></span>
+            </button>
+          </div>
+
+          <div class="tap-guide">まりもをタップで +1mm</div>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-card clickable" id="sizeCard" role="button" tabindex="0" aria-label="大きさ表示切り替え">
+          <div class="label">まりもの大きさ</div>
+          <div class="value" id="sizeDisplay">10 mm</div>
+          <div class="hint">タップで表示切り替え</div>
+        </div>
+
+        <div class="info-card clickable" id="timeCard" role="button" tabindex="0" aria-label="時間表示切り替え">
+          <div class="label">経過した時間</div>
+          <div class="value" id="timeDisplay">0 秒</div>
+          <div class="hint">タップで表示切り替え</div>
+        </div>
+
+        <div class="info-card">
+          <div class="label">タップした回数</div>
+          <div class="value" id="tapDisplay">0 回</div>
+          <div class="hint">累計表示</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
