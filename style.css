@@ -13,10 +13,12 @@ html, body {
     radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.12), transparent 20%),
     linear-gradient(to bottom, #79c9f3 0%, #2d90c7 35%, #145d8a 70%, #0d3f61 100%);
   overflow-x: hidden;
+  touch-action: manipulation;
 }
 
 body {
   position: relative;
+  -webkit-text-size-adjust: 100%;
 }
 
 .app {
@@ -140,6 +142,10 @@ body {
   outline: none;
   overflow: hidden;
   filter: saturate(0.92);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .marimo::before {
@@ -315,6 +321,10 @@ body {
 .clickable {
   cursor: pointer;
   transition: transform 0.12s ease, background 0.12s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .clickable:hover {
